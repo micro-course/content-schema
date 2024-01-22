@@ -14,8 +14,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "title": "LessonPath",
-        "format": "uri-reference"
+        "title": "LessonPath"
       }
     }
   },
