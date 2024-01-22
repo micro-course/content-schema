@@ -1,0 +1,23 @@
+{
+  "name": "course-schema",
+  "version": "1.0.0",
+  "description": "## Как подключить валидацию в vscode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:types": "ts-node ts-generator.ts",
+    "replace-cuid": "ts-node replace-cuid.ts"
+  },
+  "keywords": [],
+  "author": "Evgeny Paromov",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "cuid": "^3.0.0",
+    "json-schema-to-typescript": "^13.1.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

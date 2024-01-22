@@ -1,0 +1,7 @@
+{
+  "yaml.schemas": {
+    "./schemas/course.schema.json": "*.course.yaml",
+    "./schemas/lesson.schema.json": "*.lesson.yaml",
+    "file:///home/paromov/prog/%40micro-courses/course-schema/schemas/lesson.schema.json": "file:///home/paromov/prog/%40micro-courses/course-schema/test-structure/test-course-1/lessons/first.lesson.yaml"
+  }
+}
