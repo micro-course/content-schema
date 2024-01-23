@@ -11,16 +11,19 @@ export interface Lesson {
   id: Cuid;
   title: string;
   blocks: (TextBlock | VideoBlock | QuestionBlock)[];
+  [k: string]: unknown;
 }
 export interface TextBlock {
   id: Cuid;
   type: "text";
   text: string;
+  [k: string]: unknown;
 }
 export interface VideoBlock {
   id: Cuid;
   type: "video";
   url: string;
+  [k: string]: unknown;
 }
 export interface QuestionBlock {
   id: Cuid;
@@ -29,9 +32,11 @@ export interface QuestionBlock {
   explanation?: string;
   successMessage?: string;
   text?: string;
+  [k: string]: unknown;
 }
 export interface AnswerOption {
   id: Cuid;
   text: string;
   isRight: boolean;
+  [k: string]: unknown;
 }

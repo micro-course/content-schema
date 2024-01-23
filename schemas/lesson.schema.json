@@ -20,7 +20,6 @@
       }
     }
   },
-  "additionalProperties": false,
   "block": {
     "textBlock": {
       "required": ["id", "type", "text"],
@@ -34,8 +33,7 @@
         "text": {
           "type": "string"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "videoBlock": {
       "required": ["id", "type", "url"],
@@ -49,8 +47,7 @@
         "url": {
           "type": "string"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "questionBlock": {
       "required": ["id", "type", "answerOptions"],
@@ -74,8 +71,7 @@
         "text": {
           "type": "string"
         }
-      },
-      "additionalProperties": false
+      }
     }
   },
   "definitions": {
@@ -96,8 +92,7 @@
         "isRight": {
           "type": "boolean"
         }
-      },
-      "additionalProperties": false
+      }
     }
   }
 }
