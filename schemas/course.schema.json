@@ -8,10 +8,15 @@
       "$ref": "#/definitions/cuid"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 100
     },
     "description": {
       "type": "string"
+    },
+    "shortDescription": {
+      "type": "string",
+      "maxLength": 400
     },
     "thumbnail": {
       "type": "string"

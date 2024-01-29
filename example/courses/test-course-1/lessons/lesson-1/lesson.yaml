@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../../schemas/lesson.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/micro-course/content-schema/main/schemas/lesson.schema.json
 id: "{cuid}"
 title: "Продвинутое программирование на Python"
 blocks:
