@@ -26,13 +26,11 @@ function watchYAMLFiles(relativePath: string) {
   });
 
   watcher.on("add", (file) => {
-    console.log(`Найден новый файл: ${file}`);
     replaceCuidInFile(file);
   });
 
   // Обработка при изменении файла
   watcher.on("change", (file) => {
-    console.log(`Обнаружены изменения в файле: ${file}`);
     replaceCuidInFile(file);
   });
 }
