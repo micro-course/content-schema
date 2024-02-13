@@ -28,8 +28,7 @@
     "dependencies": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Cuid"
+        "$ref": "#/definitions/cuid"
       }
     },
     "lessons": {
@@ -37,12 +36,31 @@
       "items": {
         "$ref": "#/definitions/cuid"
       }
+    },
+    "product": {
+      "$ref": "#/definitions/product"
     }
   },
   "definitions": {
     "cuid": {
       "type": "string",
       "title": "cuid"
+    },
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "price"],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/cuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        }
+      }
     }
   }
 }
