@@ -6,6 +6,14 @@
  */
 
 export type Cuid = string;
+export type Product =
+  | {
+      access: "free";
+    }
+  | {
+      access: "paid";
+      price: number;
+    };
 
 export interface Course {
   id: Cuid;
@@ -16,10 +24,5 @@ export interface Course {
   image: string;
   dependencies?: Cuid[];
   lessons: Cuid[];
-  product?: Product;
-}
-export interface Product {
-  id: Cuid;
-  name: string;
-  price: number;
+  product: Product;
 }

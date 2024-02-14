@@ -1,7 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["id", "title", "description", "lessons", "thumbnail", "image"],
+  "required": [
+    "id",
+    "title",
+    "description",
+    "lessons",
+    "thumbnail",
+    "image",
+    "product"
+  ],
   "additionalProperties": false,
   "properties": {
     "id": {
@@ -47,20 +55,31 @@
       "title": "cuid"
     },
     "product": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["id", "name", "price"],
-      "properties": {
-        "id": {
-          "$ref": "#/definitions/cuid"
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["access"],
+          "properties": {
+            "access": {
+              "const": "free"
+            }
+          }
         },
-        "name": {
-          "type": "string"
-        },
-        "price": {
-          "type": "number"
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["access", "price"],
+          "properties": {
+            "access": {
+              "const": "paid"
+            },
+            "price": {
+              "type": "number"
+            }
+          }
         }
-      }
+      ]
     }
   }
 }
